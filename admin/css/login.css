@@ -1,0 +1,73 @@
+h2,label,i{
+  color:white;
+}
+body{
+  background-image:url("../images/a.jpg");
+  background-size: cover;
+  font-family: Helvetica;
+}
+.login-form{
+  width: 370px;
+  top: 50%;
+  Left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border: 1px solid  rgba(0, 0, 0, 0.772);
+  border-radius: 3%;
+  padding: 10px 45px 10px 35px;
+  background-color:  rgba(0, 0, 0, 0.772);
+}
+/* puts icon inside box */
+.input1{
+position: relative;
+padding-top: 25px;
+}
+
+.input1 input {
+padding-left: 30px;
+width: 100%;
+padding: 15px 10px;
+border: 1px solid white;
+border-radius: 5px;
+color:white;
+background: transparent;
+}
+.login-form button
+{
+font-size: 15px;
+font-weight: bold;
+margin: 20px 0;
+padding: 10px 15px;
+width: 28%;
+border-radius: 5px;
+border: 0;
+}
+.input1 .bx {
+  position: absolute;
+  right: 0px; /* Adjust this value to align the icon properly */
+  top: 35px; /* Adjust this value to align the icon vertically */
+}
+.login-form h2
+{
+font-size: 35px;
+text-align: center;
+text-transform: uppercase;
+margin: 40px 0;
+}
+i,label{
+font-size:25px;
+}
+p{
+font-size:15px;
+color: white;
+}
+.btn:hover{
+cursor: pointer;
+background-color: aqua;
+}
+a:hover{
+color: aqua;
+}
+a{
+color:red;
+}

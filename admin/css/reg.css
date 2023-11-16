@@ -1,0 +1,77 @@
+body{
+  background-image:url("../images/a.jpg");
+  background-size: cover;
+  font-family: Helvetica;
+}
+h1
+{
+color: white;
+font-size: 45px;
+text-align: center;
+text-transform: uppercase;
+}
+.reg-form{
+  width: 450px;
+  top: 50%;
+  Left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border: 1px solid  rgba(0, 0, 0, 0.772);
+  border-radius: 3%;
+  padding: 10px 45px 10px 35px;
+  background-color:  rgba(0, 0, 0, 0.772);
+}
+.input1{
+  position: relative;
+  padding: 8px;
+
+}
+.input1 input{
+  width: 100%;
+  padding: 15px 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  background: transparent;
+}
+.gender
+{
+  padding-top:15px;
+  padding-bottom: 15px;
+}
+.gender {
+display: flex;
+gap: 10px;
+}
+
+.radio-box {
+display: flex;
+align-items: center;
+justify-content: space-between;
+border: 1px solid white;
+border-radius: 5px;
+width: 20%;
+padding: 5px;
+}
+
+.radio-box input[type="radio"] {
+margin-right: 5px;
+}
+
+.radio-box label {
+color: white;
+}
+
+.reg-form button
+{
+font-size: 15px;
+font-weight: bold;
+margin: 20px 0;
+padding: 10px 20px ;
+width: 25%;
+border-radius: 5px;
+border: 1px;
+}
+label{
+  color: white;
+}

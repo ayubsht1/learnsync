@@ -1,0 +1,40 @@
+body{
+    background-image:url("../images/a.jpg");
+    background-size: cover;
+    font-family: Helvetica;
+}
+.login-form{
+    width: 600px;
+    top: 50%;
+    Left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border: 1px solid  rgba(0, 0, 0, 0.772);
+    border-radius: 3%;
+    padding: 30px;
+    background-color:  rgba(0, 0, 0, 0.772);
+}
+h1
+{
+color: white;
+font-size: 30px;
+text-align: center;
+text-transform: uppercase;
+}
+a:hover{
+color: aqua;
+}
+a{
+color:red;
+border: 1px solid white;
+border-radius: 4px;
+padding: 10px;
+}
+.login{
+display: flex;
+justify-content: center;
+padding: 10px;
+}
+.login div{
+    padding: 10px;
+}

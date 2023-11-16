@@ -1,0 +1,97 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, ul, li {
+    margin: 0px 18px;
+    padding: 0;
+}
+
+/* Set the background to dark black and text color to white */
+body {
+    background-color: white;
+    background-image:url("../images/photo.jpg");
+    background-size: cover;
+    color: black;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+h1 {
+    margin: 40px;
+}
+
+/* Create a navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #333; */
+    padding: 10px;
+    font-size: 20px;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    flex-grow: 1; /* Distribute space evenly between links */
+    display: flex; /* Enable flex properties */
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+    padding: 10px;
+    height: 100px;
+    border-right: 1px solid #555;
+    transition: background-color 0.3s;
+}
+
+.navbar a:last-child {
+    border-right: none;
+}
+
+.navbar a:hover {
+    background-color:rgb(95, 102, 100);
+    color: #fff;
+    opacity: 70%;
+}
+
+
+
+h1 {
+    text-align: center;
+    color: black; /* Text color for headings */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #fff; /* Text color for table content */
+}
+
+th {
+    background-color: #000; /* Background color for table header */
+    color: #fff; /* Text color for table header */
+    padding: 20px;
+    opacity: 70%;
+}
+
+td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #333; /* Slightly lighter border color */
+    
+}
+
+tr.odd {
+    background-color: #111; /* Slightly darker black for odd rows */
+    opacity: 70%;
+
+}
+
+tr.even {
+    opacity: 70%;
+
+    background-color: #000; /* Black for even rows */
+}
+
+a {
+    text-decoration: none;
+    color: #0078d4; /* Hyperlink color, adjust as needed */
+}
