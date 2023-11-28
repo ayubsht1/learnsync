@@ -38,10 +38,14 @@ while ($row=mysqli_fetch_assoc($res)){
 
 if (isset($_POST['delete'])) {
     $noteid = $_POST['noteid'];
+    $file=$_POST['file'];
     $sql = "DELETE FROM note WHERE id='$noteid'";
     $r = $conn->query($sql);
-
+    $file_path = "../noteuploads/" . $file;
     if ($r) {
+        if (file_exists($file_path)){
+            unlink($file_path);
+        }
         echo '<script>
             alert("Note deleted successfully");
             window.location.href = "index.php";
@@ -167,6 +171,7 @@ if (isset($_POST['delete'])) {
         
                 <form action='index.php' method='POST' style='padding-top: 2px; padding-bottom: 2px;'>
                     <input type='hidden' name='noteid' value='$id'>
+                    <input type='hidden' name='file' value='".htmlspecialchars($file_file,ENT_QUOTES,'UTF-8')."'>
                     <input type='submit' name='delete' value='delete' style='width: 100%;'>
                 </form>
             </td>";
