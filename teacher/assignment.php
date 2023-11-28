@@ -12,10 +12,15 @@ if(!$sessionid)
 <?php
 if (isset($_POST['delete'])) {
     $assignmentid = $_POST['assignmentid'];
+    $file=$_POST['file'];
+    $file_path = "../assignmentuploads/" . $file;
     $sql = "DELETE FROM assignment WHERE id='$assignmentid'";
     $r = $conn->query($sql);
 
     if ($r) {
+        if (file_exists($file_path)){
+            unlink($file_path);
+        }
         echo '<script>
             alert("Assignment deleted successfully");
             window.location.href = "assignment.php";
@@ -126,6 +131,7 @@ if (isset($_POST['delete'])) {
                 </form>
                 <form action='assignment.php' method='POST' style='padding-top: 2px; padding-bottom: 2px;'>
                     <input type='hidden' name='assignmentid' value='$id'>
+                    <input type='hidden' name='file' value='".$file_file."'>
                     <input type='submit' name='delete' value='delete' style='width: 100%;'>
                 </form>
             </td>";
