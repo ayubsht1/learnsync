@@ -137,11 +137,17 @@ where id=$id";
 } 
 else if(isset($_POST['deny'])){
     $id=$_POST['ansid'];
-    $sql="UPDATE answer
-    SET verify='deny'
-    where id=$id";
+    $file_path = "../noteuploads/" . $file_name;
+    if (file_exists($file_path)){
+        unlink($file_path);
+    }
+    $sql="DELETE FROM answer WHERE id=$id";
+    // $sql="UPDATE answer
+    // SET verify='deny'
+    // where id=$id";
         if($conn->query($sql)){
             echo "<script>alert('Deny successful'); window.location.href='answer.php';</script>";
+            
         }else 
         echo "<script>alert('Failed to deny'); window.location.href='answer.php';</script>";
     } 
