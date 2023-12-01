@@ -4,7 +4,6 @@
 include 'header.php';
 session_start();
 
-// Assuming you have a database connection established
 require '../connection.php';
 
 // Assuming you have a session with student's semester

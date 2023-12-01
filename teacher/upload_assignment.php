@@ -75,7 +75,6 @@ if(!$sessionid)
             <label for="semester">Select Semester:</label>
             <select name="semid" id="semid">
             <?php
-            // Assuming you have a database connection named $conn
             $sql =" SELECT * FROM semester
             ORDER BY semID ASC";
             $result = $conn->query($sql);

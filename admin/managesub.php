@@ -88,7 +88,6 @@ body, ul {
     <label for="semid">Choose Semester:</label>
     <select name="semid" id="semester">
         <?php
-        // Assuming you have a database connection named $conn
         $sql =" SELECT * FROM semester
         ORDER BY semID ASC";
         

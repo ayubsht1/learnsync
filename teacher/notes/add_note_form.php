@@ -86,9 +86,6 @@ require '../../connection.php';
             }
               
            }
-
-                // Assuming you have a database connection here-
-               
             ?>
         </select><br>
 

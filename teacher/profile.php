@@ -10,7 +10,6 @@ if(!$sessionid)
 $sql = "SELECT * FROM teacher WHERE id = $sessionid";
 $r = $conn->query($sql);
     if ($r) {
-        // Use mysqli_num_rows to check if any rows were returned
         if ($r->num_rows > 0) {
 
         // Fetch the row and store id and email values

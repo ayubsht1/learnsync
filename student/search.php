@@ -7,8 +7,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the search term from the form
     $searchTerm = $_POST['search'];
 
-    // Include your database connection code here
-
     // Use prepared statements to prevent SQL injection
 $sql = "SELECT note.name as note_name, note.file, note.date FROM note
         INNER JOIN subject ON subject.id = note.subId

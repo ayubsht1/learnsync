@@ -89,7 +89,6 @@ exit;}
             <label for="semid">Choose Semester:</label>
             <select name="semid" id="semid">
     <?php
-    // Assuming you have a database connection named $conn
     $id = $row['semester']; // Assuming $row is fetched from somewhere
 
     $sql = "SELECT * FROM semester ORDER BY semID ASC";

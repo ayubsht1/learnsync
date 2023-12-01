@@ -74,7 +74,6 @@ if (isset($_POST['delete'])) {
     <label for="semid">Choose Semester:</label>
     <select name="semid" id="semid">
         <?php
-        // Assuming you have a database connection named $conn
         $sql =" SELECT * FROM semester
         ORDER BY semID ASC";
         $result = $conn->query($sql);
@@ -121,7 +120,7 @@ if (isset($_POST['delete'])) {
             echo "<td>" . $row['duedate'] . "</td>";
             echo "<td>" . $row['file'] . "</td>";
             echo "<td>" . $row['subject_name'] . 
-            "</td>"; // Use the alias            
+            "</td>";            
             echo "<td>" . $row['semester'] . "</td>";
             echo "
             <td>
