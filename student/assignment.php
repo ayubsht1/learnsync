@@ -5,7 +5,12 @@ include 'header.php';
 session_start();
 
 require '../connection.php';
-
+$sessionid=$_SESSION['id'];
+if(!$sessionid)
+{
+    header("Location: logins.php");
+    exit();
+}
 // Assuming you have a session with student's semester
 $semester = $_SESSION['semester'];
 
