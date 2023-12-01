@@ -26,6 +26,10 @@ if (isset($_POST["submit"])) {
     if (strlen($c) !== 10) {
         array_push($errors, "Incorrect Phone Number: Length must be 10!");
     }
+    if(!is_numeric($c))
+    {
+        array_push($errors,"Phone number should only contain numbers.");
+    }
 
      // Uniqye Key Validation 
      $sql_check_mail = "SELECT * FROM student WHERE email = '$e'";

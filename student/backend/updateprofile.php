@@ -30,6 +30,10 @@ if (isset($_POST["submit"])) {
     if (strlen($c) !== 10) {
         array_push($errors, "Incorrect Phone Number: Length must be 10!");
     }
+    if(!is_numeric($c))
+    {
+        array_push($errors,"Phone number should only contain numbers.");
+    }
 
     if (count($errors) > 0) {
         foreach ($errors as $error) {
