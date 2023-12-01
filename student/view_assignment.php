@@ -30,7 +30,8 @@ $selectedSemester = $_SESSION['semester']; // Assuming you also pass semester as
 // Retrieve assignments and associated answers for the selected subject and semester
 $sql = "SELECT 
             a.id AS assignmentId, 
-            a.name AS assignmentName, 
+            a.name AS assignmentName,
+            a.file AS assignmentFile, 
             t.name AS teacherName, 
             ans.verify AS answerVerify,
             ans.id AS answerId,
@@ -138,7 +139,7 @@ foreach ($assignments as $assignment) {
                 $isOdd = !$isOdd;
                 echo "<tr class='$zebraClass'>";
     echo "<td>" . $sn++ . "</td>";
-    echo "<td>" . $assignment['assignmentName'] . "</td>";
+    echo "<td><a href='../assignmentuploads/" . $assignment['assignmentFile'] . "' download>" . $assignment['assignmentName'] . "</a></td>";
     echo "<td>" . $assignment['teacherName'] . "</td>";
 
     // Check if answer data exists for this assignment

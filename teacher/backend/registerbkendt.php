@@ -43,7 +43,7 @@ if (isset($_POST["submit"])) {
     else{
     if (empty($errors)) {
     // Prepare and execute the SQL query
-    $sql = "INSERT INTO teacher (name, email, password, address, contact, gender) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO teacher (name, email, password, address, contact, gender) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
 
 
@@ -57,16 +57,16 @@ if (isset($_POST["submit"])) {
         $p = mysqli_real_escape_string($conn, $p);
         $a = mysqli_real_escape_string($conn, $a);
         $c = mysqli_real_escape_string($conn, $c);
-        $gen = mysqli_real_escape_string($conn, $gen);
+        $gen = mysqli_real_escape_string($conn, $g);
 
         // Hashing password
         $hashedPassword = password_hash($p, PASSWORD_DEFAULT);
 
         // Bind parameters and execute
-        $stmt->bind_param("sssssss", $n, $e, $hashedPassword, $a, $c, $s, $gen );
+        $stmt->bind_param("ssssss", $n, $e, $hashedPassword, $a, $c, $gen );
         if ($stmt->execute()) {
             echo '<script>alert("Signed up successfully");</script>';
-            echo '<script>window.location.href="../logins.php"</script>';
+            echo '<script>window.location.href="../logint.php"</script>';
             exit;
         } else {
             echo "<script>alert('An error occurred while processing your request. Please try again later.');</script>";
