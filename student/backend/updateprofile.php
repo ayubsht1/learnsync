@@ -22,6 +22,10 @@ if (isset($_POST["submit"])) {
     if (empty($n) || empty($a) || empty($c)|| empty($s)) {
         array_push($errors, "All fields are required");
     }
+    if(is_numeric($n)||is_numeric($a))
+    {
+        array_push($errors,"enter a valid name or address");
+    }
     if (!$p==NULL){
         if (strlen($p) < 8 || strlen($p) > 24) {
             array_push($errors, "Password must be between 8 and 24 characters");

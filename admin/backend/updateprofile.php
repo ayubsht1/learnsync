@@ -18,6 +18,10 @@ $errors = array();
 if (empty($c)) {
     array_push($errors, "Contact is required");
 }
+if(is_numeric($n)||is_numeric($a))
+    {
+        array_push($errors,"enter a valid name or address");
+    }
 if(!empty($e)){
     if (!filter_var($e, FILTER_VALIDATE_EMAIL)) {
         array_push($errors,"Invalid email format!");

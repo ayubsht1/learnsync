@@ -17,6 +17,10 @@ if (isset($_POST["submit"])) {
     if (empty($n) || empty($e) || empty($p) || empty($a) || empty($c)) {
         array_push($errors, "All fields are required");
     }
+    if(is_numeric($n)||is_numeric($a))
+    {
+        array_push($errors,"enter a valid name or address");
+    }
     if (!empty($e) && !filter_var($e, FILTER_VALIDATE_EMAIL)) {
         array_push($errors, "Email not valid");
     }
